@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import com.hgney.banksaladtest.R
 import com.hgney.banksaladtest.datas.Account
 
@@ -24,6 +25,14 @@ class AccountAdapter(context: Context, resId: Int, list: List<Account>) : ArrayA
             tempRow = inf.inflate(R.layout.account_list_item, null)
         }
         val row = tempRow!!
+
+        val balanceTxt = row.findViewById<TextView>(R.id.balanceTxt)
+        val descTxt = row.findViewById<TextView>(R.id.descTxt)
+        val bankNameTxt = row.findViewById<TextView>(R.id.bankNameTxt)
+
+        val data = mList[position]
+
+        descTxt.text = data.description
 
         //tempRow는 null일 가능성을 제거했으니, 실제 row에다가 새로 대입.
         //=> 만들어진 row를 결과로 return.

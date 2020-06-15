@@ -24,6 +24,7 @@
             >
 
             <TextView
+                android:id="@+id/bankNameTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="~~은행 입출금계좌"
@@ -31,6 +32,7 @@
                 android:layout_marginTop="5dp"/>
 
             <TextView
+                android:id="@+id/descTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="계좌번호 자리"
@@ -44,6 +46,7 @@
             android:gravity="right"
             >
             <TextView
+                android:id="@+id/balanceTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="25sp"
