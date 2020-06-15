@@ -2,11 +2,14 @@ package com.hgney.banksaladtest
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.hgney.banksaladtest.adapters.AccountAdapter
 import com.hgney.banksaladtest.datas.Account
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
 
     val accountArrayList = ArrayList<Account>()
+    lateinit var myAdapter : AccountAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +21,8 @@ class MainActivity : BaseActivity() {
     override fun setValues() {
 
         addAccount()
+        myAdapter = AccountAdapter(mContext, R.layout.account_list_item, accountArrayList)
+        accountListView.adapter = myAdapter
 
     }
 
