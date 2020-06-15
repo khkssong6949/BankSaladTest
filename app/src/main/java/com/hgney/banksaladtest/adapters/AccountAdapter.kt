@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter
 import com.hgney.banksaladtest.R
 import com.hgney.banksaladtest.datas.Account
 
-class AccountAdapter(context: Context, resId: Int, list: List) : ArrayAdapter<Account>(context, resId, list) {
+class AccountAdapter(context: Context, resId: Int, list: List<Account>) : ArrayAdapter<Account>(context, resId, list) {
 
     val mContext = context
     val mList = list
@@ -27,8 +27,6 @@ class AccountAdapter(context: Context, resId: Int, list: List) : ArrayAdapter<Ac
 
         //tempRow는 null일 가능성을 제거했으니, 실제 row에다가 새로 대입.
         //=> 만들어진 row를 결과로 return.
-
-
         return row
     }
 
